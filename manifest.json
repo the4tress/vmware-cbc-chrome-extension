@@ -1,0 +1,57 @@
+{
+  "name": "VMware Carbon Black Cloud - Audit and Remediation",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension allows an analyst to immediately run queries and see results straight from the browser.",
+  "homepage_url": "https://www.carbonblack.com",
+  "icons": {
+    "16": "icons/LiveOps_16x16.png",
+    "48": "icons/LiveOps_48x48.png",
+    "128": "icons/LiveOps_128x128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "lib/js/background.js"
+    ],
+    "persistent": true
+  },
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "icons/LiveOps_16x16.png",
+    "default_title": "VMware Carbon Black Cloud Audit & Remediation",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "contextMenus",
+    "notifications",
+    "tabs",
+    "storage",
+    "https://*/*",
+    "http://*/*",
+    "https://defense.conferdeploy.net/*"
+  ],
+  "omnibox": {
+    "keyword": "lq"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "css": [
+        "lib/css/content.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "lib/js/content.js"
+      ]
+    }
+  ]
+}

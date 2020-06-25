@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+
+        <!-- DataTables Bootstrap Theme CSS -->
+        <link rel="stylesheet" href="lib/css/dataTables.bootstrap4.min.css" crossorigin="anonymous">
+
+        <style>
+            .card table td {
+                 white-space:nowrap;
+            }
+            /*.card table thead, .card table tbody { display: block; }*/
+            .card table {
+                display: block;
+                height: 425px;
+                overflow-x: auto;  /* Hide the horizontal scroll */
+            }
+        </style>
+
+        <title>CBC LiveOps Extention Options</title>
+    </head>
+
+    <body style="width: 800px; height: 400px;">
+    	<div class="container">
+
+            <nav class="navbar">
+                <a class="navbar-brand">
+                    <img src="icons/LiveOps_48x48.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                    CBC LiveOps Extention Options
+                </a>
+
+                <nav class="nav nav-pills justify-content-end">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="showScheduled">
+                                <label class="custom-control-label" style="padding-right: 10px;" for="showScheduled">Show Scheduled</label>
+                            </div>
+                    
+                            <a class="nav-item nav-link active" href="#">History</a>
+                            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">New Query</a>
+                        </div>
+                    </form>
+                </nav>
+
+            </nav>
+
+            <!-- <h2><img src="icons/LiveOps_48x48.png" style="margin: 5px;">Recent Queries</h2> -->
+    		<!-- <div class="panel-group" id="queryHistory" role="tablist" aria-multiselectable="false"></div> -->
+            <div class="accordion" id="queryHistory">
+                <div class="d-flex justify-content-center" id="loadingContent">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+
+    	</div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="lib/js/jquery-3.4.1.min.js"></script>
+        <script src="lib/js/popper.min.js"></script>
+        <script src="lib/js/bootstrap.min.js"></script>
+        <script src="lib/js/jquery.dataTables.min.js"></script>
+        <script src="lib/js/dataTables.bootstrap4.min.js"></script>
+
+        <!-- Custom app JS -->
+        <script src="lib/js/popup.js"></script>
+    </body>
+</html>
